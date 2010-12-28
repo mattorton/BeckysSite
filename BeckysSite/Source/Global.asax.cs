@@ -18,9 +18,11 @@ namespace Source
 
             routes.MapRoute(
                 "Default", // Route name
-                "{controller}/{action}/{id}", // URL with parameters
-                new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
+                "{controller}/{action}", // URL with parameters
+                new { controller = "Home", action = "Index", category = (string)null } // id = UrlParameter.Optional } // Parameter defaults
             );
+
+            //routes.MapRoute(null, "{category}", new { controller = "Home", action = "Index" });
 
         }
 
